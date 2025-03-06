@@ -1,0 +1,145 @@
+/* OPTIONAL: Use Poppins font from Google Fonts in your index.html or global CSS
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; /* or your chosen font */
+}
+
+.navbar {
+  background-color: #000; /* black background */
+  color: #fff;
+}
+
+.navbar-container {
+  width: 95%; /* increase if needed to reduce wrapping */
+  max-width: 1400px; /* widen if you have many links */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  position: relative;
+}
+
+/* LOGO & BRAND (LEFT) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-logo {
+  height: 45px;
+  width: auto;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.navbar-brand h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: -4px;
+}
+
+.navbar-brand p {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* NAV LINKS (CENTER) */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* reduce if still wrapping */
+  flex: 1;
+  white-space: nowrap; /* keep links on one line */
+}
+
+.navbar-center a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-center a:hover {
+  color: #bbb;
+}
+
+/* FELLOWSHIP BUTTON (RIGHT) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fellowship-btn {
+  background-color: #7a5ce0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.fellowship-btn:hover {
+  background-color: #6b4ed2;
+}
+
+/* HAMBURGER ICON (MOBILE) */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 40px;
+  height: 40px;
+  background-color: #7a5ce0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.navbar-hamburger div {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media screen and (max-width: 992px) {
+  /* Hide center links by default, show hamburger */
+  .navbar-center {
+    position: absolute;
+    top: 70px; /* same as navbar height */
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    display: none;
+  }
+
+  .navbar-center.open {
+    display: flex;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+}
