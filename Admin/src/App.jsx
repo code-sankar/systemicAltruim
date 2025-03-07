@@ -11,7 +11,7 @@ import ChallengePage from "./pages/ChallengePages";
 import CompletePage from "./pages/CompletePage";
 import FounderPage from "./pages/FounderPage";
 import SubscriberPage from "./pages/SubscriberPage";
-import AdminSignup from "./components/AdminSignUp";
+import AdminSignup from "./components/AdminSignup";
 
 function App() {
   const isAuthenticated = localStorage.getItem("token");
