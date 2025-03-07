@@ -5,7 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import DashboardLayout from "./components/Layout/DashboardLayout";
+import DashboardLayout from "./components/layout/DashboardLayout";
 import AdminLogin from "./components/AdminLogin";
 import ChallengePage from "./pages/ChallengePages";
 import CompletePage from "./pages/CompletePage";
@@ -23,12 +23,12 @@ function App() {
         <Route path="/login" element={<AdminLogin />} />
 
         {isAuthenticated ? (
-          <Route path="/" element={<DashboardLayout />}>
+          <Route path="/" element={<DashboardLayout/>}>
             <Route index element={<Navigate to="/challenges" />} />
             <Route path="challenges" element={<ChallengePage />} />
-            <Route path="completers" element={<CompletePage />} />
-            <Route path="founders" element={<FounderPage />} />
-            <Route path="subscribers" element={<SubscriberPage />} />
+            <Route path="completed" element={<CompletePage />} />
+            <Route path="founder" element={<FounderPage />} />
+            <Route path="subscriber" element={<SubscriberPage />} />
           </Route>
         ) : (
           <Route path="*" element={<Navigate to="/login" />} />

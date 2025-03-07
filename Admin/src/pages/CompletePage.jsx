@@ -21,7 +21,7 @@ function CompleterPage() {
   const fetchCompleters = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5000/completed");
+      const response = await fetch("https://systemicaltruim.onrender.com/api/v1/completed");
       const data = await response.json();
       setCompleters(data);
       setLoading(false);
@@ -45,7 +45,7 @@ function CompleterPage() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/completed", {
+      const response = await fetch("https://systemicaltruim.onrender.com/api/v1/completed", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -82,7 +82,7 @@ function CompleterPage() {
   // Delete a completer
   const deleteCompleter = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/completed/${id}`, {
+      const response = await fetch(`https://systemicaltruim.onrender.com/api/v1/completed/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

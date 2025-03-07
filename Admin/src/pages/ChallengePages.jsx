@@ -20,7 +20,7 @@ function ChallengePage() {
   const fetchChallenges = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5000/challenges");
+      const response = await fetch("https://systemicaltruim.onrender.com/api/v1/challenges");
       const data = await response.json();
       setChallenges(data);
       setLoading(false);
@@ -47,7 +47,7 @@ function ChallengePage() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/challenges", {
+      const response = await fetch("https://systemicaltruim.onrender.com/api/v1/challenges", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -82,7 +82,7 @@ function ChallengePage() {
   const toggleVisibility = async (challengeId, currentVisible) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/challenges/${challengeId}`,
+        `https://systemicaltruim.onrender.com/api/v1/${challengeId}`,
         {
           method: "PUT",
           headers: {
@@ -107,7 +107,7 @@ function ChallengePage() {
   const deleteChallenge = async (challengeId) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/challenges/${challengeId}`,
+        `https://systemicaltruim.onrender.com/api/v1/${challengeId}`,
         {
           method: "DELETE",
           headers: {

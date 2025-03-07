@@ -11,7 +11,7 @@ function SubscriberPage() {
   const fetchSubscribers = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5000/subscribers");
+      const response = await fetch("https://systemicaltruim.onrender.com/api/v1/subscriber");
       const data = await response.json();
       setSubscribers(data);
       setLoading(false);
@@ -29,7 +29,7 @@ function SubscriberPage() {
   const handleAddSubscriber = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/subscribers", {
+      const response = await fetch("https://systemicaltruim.onrender.com/api/v1/subscriber", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +52,7 @@ function SubscriberPage() {
   // Handle deleting a subscriber
   const handleDeleteSubscriber = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/subscribers/${id}`, {
+      const response = await fetch(`https://systemicaltruim.onrender.com/api/v1/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

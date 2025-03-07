@@ -19,7 +19,7 @@ function FoundersPage() {
   const fetchFounders = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5000/founders");
+      const response = await fetch("https://systemicaltruim.onrender.com/api/v1/founder");
       const data = await response.json();
       setFounders(data);
       setLoading(false);
@@ -43,7 +43,7 @@ function FoundersPage() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/founders", {
+      const response = await fetch("https://systemicaltruim.onrender.com/api/v1/founder", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -73,7 +73,7 @@ function FoundersPage() {
   // Delete a founder
   const deleteFounder = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/founders/${id}`, {
+      const response = await fetch(`https://systemicaltruim.onrender.com/api/v1/founder/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
