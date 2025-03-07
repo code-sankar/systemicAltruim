@@ -7,9 +7,9 @@ const app = express();
 app.use(
   cors({
     origin: [
-      // "https://video-tube-ficd.vercel.app",
-      // "https://video-tube-3cch.vercel.app",
-      // "http://localhost:5173",
+      "https://systemic-altruim-l7ta.vercel.app",
+      "https://systemic-altruim.vercel.app",
+      "http://localhost:5173",
     ],
     credentials: true,
   })
