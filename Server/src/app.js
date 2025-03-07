@@ -27,7 +27,7 @@ import completedRouter from "./routes/completed.routes.js";
 import founderRouter from "./routes/founder.routes.js";
 import subscriberRouter from "./routes/subscriber.routes.js";
 
-app.get("/", (req, res) => res.send("Backend of systemAltruism"));
+app.get("/", (req, res) => res.send("Backend of system Altruism"));
 
 app.use("/api/v1/admin", adminRouter);
 app.use("/api/v1/challenges", challengesRouter);

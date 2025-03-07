@@ -12,7 +12,7 @@ function AdminSignup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/admin/register", {
+      const response = await fetch("https://systemicaltruim.onrender.com/api/v1/admin/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullName, email, username, password }),
